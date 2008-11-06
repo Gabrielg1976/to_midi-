@@ -1,0 +1,25 @@
+
+<div class="leftside">
+<div class="leftbox"><h1>Latest Produced Songs</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Composed by</th>
+  </tr>
+
+<% for song in @songs %>
+  <tr>
+    <td><%=h song.title %></td>
+    <td><%=h song.body %></td>
+    <td><%=h song.composed_by %></td>
+    <td><%= link_to 'Show', song %></td>
+    <td><%= link_to 'Edit', edit_song_path(song) %></td>
+    <td><%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+</div>
+</div>
+
