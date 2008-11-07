@@ -4255,3 +4255,144 @@ Processing SongsController#index (for 127.0.0.1 at 2008-11-05 22:28:03) [GET]
 Rendering template within layouts/application
 Rendering songs/index
 Completed in 0.09129 (10 reqs/sec) | Rendering: 0.06902 (75%) | DB: 0.00112 (1%) | 200 OK [http://localhost/]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2008-11-06 09:24:03) [GET]
+  Session ID: e7c7603998ac764afd39fc4d698d1094
+  Parameters: {"action"=>"index", "controller"=>"songs"}
+  [4;36;1mSong Load (0.001411)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/application
+Rendering songs/index
+Completed in 0.05771 (17 reqs/sec) | Rendering: 0.04620 (80%) | DB: 0.00141 (2%) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-06 09:24:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGI2Yjk4NzU4YjYzY2MwNmM1NjBjZjI0MWRiZTJk
+OGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--34ecb24047a85e61bf948b89c008f4654a24bf1f
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 0.02303 (43 reqs/sec) | Rendering: 0.02062 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-06 09:24:37) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGI2Yjk4NzU4YjYzY2MwNmM1NjBjZjI0MWRiZTJk
+OGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--34ecb24047a85e61bf948b89c008f4654a24bf1f
+  Parameters: {"user"=>{"password_confirmation"=>"testtest", "login"=>"john", "password"=>"testtest", "email"=>"agah@ahsh.com"}, "commit"=>"Sign up", "authenticity_token"=>"c91b11d9bed9d08e36f3f073ceb42fd911984299", "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mSQL (0.000235)[0m   [0mSELECT "login" FROM "users" WHERE (LOWER("users".login) = 'john') [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mSELECT "email" FROM "users" WHERE (LOWER("users".email) = 'agah@ahsh.com') [0m
+  [4;35;1mUser Create (0.000619)[0m   [0mINSERT INTO "users" ("salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('5ebd68a8552140effec289371bef58f781f473e9', '2008-11-06 17:24:37', 'cf7f6ce1847536cf62e5f9097a2d994061e244a2', NULL, NULL, 'john', 'agah@ahsh.com', '2008-11-06 17:24:37')[0m
+Redirected to http://localhost:3000/
+Completed in 0.09604 (10 reqs/sec) | DB: 0.00096 (1%) | 302 Found [http://localhost/users]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2008-11-06 09:24:37) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGI2Yjk4NzU4YjYzY2MwNmM1
+NjBjZjI0MWRiZTJkOGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhtUaGFua3MgZm9yIHNpZ25pbmcg
+dXAhBjoKQHVzZWR7BjsIRjoMdXNlcl9pZGkJ--1130e49ec11ac6ae604390f2e6392ea8f70f7002
+  Parameters: {"action"=>"index", "controller"=>"songs"}
+  [4;36;1mSong Load (0.000581)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/application
+Rendering songs/index
+Completed in 0.00912 (109 reqs/sec) | Rendering: 0.00291 (31%) | DB: 0.00058 (6%) | 200 OK [http://localhost/]
+
+
+Processing SongsController#new (for 127.0.0.1 at 2008-11-06 09:24:42) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGI2Yjk4NzU4YjYzY2MwNmM1
+NjBjZjI0MWRiZTJkOGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhtUaGFua3MgZm9yIHNpZ25pbmcg
+dXAhBjoKQHVzZWR7BjsIVDoMdXNlcl9pZGkJ--6feb785646bab669a22fb1af83bfc28404e729b1
+  Parameters: {"action"=>"new", "controller"=>"songs"}
+  [4;35;1mUser Load (0.000251)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering songs/new
+Completed in 0.05222 (19 reqs/sec) | Rendering: 0.03753 (71%) | DB: 0.00025 (0%) | 200 OK [http://localhost/songs/new]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2008-11-06 09:25:22) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGI2Yjk4NzU4YjYzY2MwNmM1
+NjBjZjI0MWRiZTJkOGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpCQ==--e4053ffe6c161beb8646c5471e2c3e12fd966566
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.000263)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 0.01419 (70 reqs/sec) | DB: 0.00026 (1%) | 302 Found [http://localhost/logout]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2008-11-06 09:25:22) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9n
+Z2VkIG91dC4GOgpAdXNlZHsGOwdG--6b69f0f179c083098f33b124e02453aca6650c18
+  Parameters: {"action"=>"index", "controller"=>"songs"}
+  [4;35;1mSong Load (0.000653)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/application
+Rendering songs/index
+Completed in 0.08411 (11 reqs/sec) | Rendering: 0.00314 (3%) | DB: 0.00065 (0%) | 200 OK [http://localhost/]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2008-11-06 09:25:25) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNzhlOWQ5ZDU1MGEyZDE2ZTY3
+MzU2Yjg3MDA4MDRjMWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIh5Zb3UgaGF2ZSBiZWVuIGxvZ2dl
+ZCBvdXQuBjoKQHVzZWR7BjsIVA==--b48e2525eb68526851c527fd25b9ae6b8d367b79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"songs"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00057 (1766 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/songs/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-11-06 09:25:25) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg0vc29uZ3MvMToMY3NyZl9pZCIlNzhlOWQ5ZDU1
+MGEyZDE2ZTY3MzU2Yjg3MDA4MDRjMWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRy
+b2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8499a58fbb97fd99783e8f9bce9c46b2f53e2f25
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.03415 (29 reqs/sec) | Rendering: 0.03208 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2008-11-06 09:26:20) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg0vc29uZ3MvMToMY3NyZl9pZCIlNzhlOWQ5ZDU1
+MGEyZDE2ZTY3MzU2Yjg3MDA4MDRjMWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRy
+b2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8499a58fbb97fd99783e8f9bce9c46b2f53e2f25
+  Parameters: {"action"=>"index", "controller"=>"songs"}
+  [4;36;1mSong Load (0.000726)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/application
+Rendering songs/index
+Completed in 0.00988 (101 reqs/sec) | Rendering: 0.00300 (30%) | DB: 0.00073 (7%) | 200 OK [http://localhost/]
+
+
+Processing SongsController#new (for 127.0.0.1 at 2008-11-06 09:26:26) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg0vc29uZ3MvMToMY3NyZl9pZCIlNzhlOWQ5ZDU1
+MGEyZDE2ZTY3MzU2Yjg3MDA4MDRjMWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRy
+b2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8499a58fbb97fd99783e8f9bce9c46b2f53e2f25
+  Parameters: {"action"=>"new", "controller"=>"songs"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00054 (1847 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/songs/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-11-06 09:26:26) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg8vc29uZ3MvbmV3Ogxjc3JmX2lkIiU3OGU5ZDlk
+NTUwYTJkMTZlNjczNTZiODcwMDgwNGMxYSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--daf2ff0f1ead248be832e68cde22a29f3be9d204
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.00339 (294 reqs/sec) | Rendering: 0.00134 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-11-06 09:26:37) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg8vc29uZ3MvbmV3Ogxjc3JmX2lkIiU3OGU5ZDlk
+NTUwYTJkMTZlNjczNTZiODcwMDgwNGMxYSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--daf2ff0f1ead248be832e68cde22a29f3be9d204
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"d988f51ab0199e74fc70695a5ba3fffeba6d8237", "action"=>"create", "controller"=>"sessions", "password"=>"random76", "login"=>"admin"}
+  [4;35;1mUser Load (0.000146)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01238 (80 reqs/sec) | Rendering: 0.00138 (11%) | DB: 0.00015 (1%) | 200 OK [http://localhost/session]
