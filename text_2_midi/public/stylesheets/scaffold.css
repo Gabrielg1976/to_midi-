@@ -1,285 +1,137 @@
-/***** Global Settings *****/
-
-html, body {
-border:0;
-margin:0;
-padding:0;
-}
-
 body {
-font:100%/1.25 arial, helvetica, sans-serif;
+	color:#333333;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	margin:0 auto;
+	background: transparent url("img/bg.gif") center top no-repeat;
+	background-color:#e4e4e4;
 }
 
-/***** Common Formatting *****/
+a, a:visited, a:link { color:#000000; text-decoration:underline; }
 
-h1, h2, h3, h4, h5, h6 {
-margin:0;
-padding:0;
-font-weight:normal;
+a:hover { color: #666666; }
+
+h1 { font-size:18px; margin:0; color:#333333; border-bottom: 1px dashed #333333; }
+
+h2 { font-size:12px; margin:0; color:#333333; border-bottom: 1px dashed #333333; border-top:1px dotted #333333; }
+
+h1 a, h1 a:visited, h1 a:link { text-decoration:none; }
+
+h2 a, h2 a:visited, h2 a:link { text-decoration:none; padding:10px; line-height:25px; }
+
+h2 img { margin-right:5px; border:0; }
+
+input {
+	background-color: #fff;
+	background-image:url("/images/input.gif");
+	background-repeat: repeat-x;
+	border:1px solid #b1df37;
+	width:140px;
+	padding:3px;
+	margin-top:18px;
 }
 
-h1 {
-padding:30px 0 25px 0;
-letter-spacing:-1px;
-font:2em arial, helvetica, sans-serif;}
-
-h2 {
-padding:20px 0;
-letter-spacing:-1px;
-font:1.5em arial, helvetica, sans-serif;
+div.wrap1 {
+	width: 858px;
+	margin: 0 auto;
+	overflow: hidden;
+	border:1px solid #c3c3c3;
 }
 
-h3 {
-font:1em arial, helvetica, sans-serif;
-font-weight:bold;
+div.wrap1 .wrap2 {
+	width: 856px;
+	background-repeat:repeat-y;
+	border: 1px solid #FFFFFF;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
-p, ul, ol {
-margin:0;
-padding:0 0 18px 0;
+div.wrap2 .logo {
+	width:796px;
+	height:61px;
+	padding:0px;
+	margin:0 auto;
+	background-image: url("/images/logo.png");
+	background-repeat:no-repeat;
+	color:#FFFFFF;
+	font-size:22px;
+	font-weight:bold;
+	padding:30px;
 }
 
-ul, ol {
-list-style-type:circle;
-padding:0 0 18px 40px;
+div.logo .slogan {
+	font-size:9px;
+	font-weight:normal;
+	margin-top:3px;
 }
 
-blockquote {
-margin:22px 40px;
-padding:0;
+div.info, div.info1 {
+	width:816px;
+	line-height:40px;
+	background-color:#FFFFFF;
+	padding-left:20px;
+	padding-right:20px;
+	background-image:url(/images/info.gif);
+	background-repeat:repeat-x;
 }
 
-small {
-font-size:0.85em;
+div.info1 { 
+	background-image:url(/images/info1.gif);
+	float:left; 
+	border-top:1px solid #fff; 
+	background-color:#e4e4e4;
+	color:#999;
 }
 
-img {
-border:0;
-}
+div.info1 a, div.info1 a:link, div.info1 a:visited { color:#999; }
 
-sup {
-position:relative;
-bottom:0.3em;
-vertical-align:baseline;
-}
+div.info1 a:hover { color: #666; }
 
-sub {
-position:relative;
-bottom:-0.2em;
-vertical-align:baseline;
-}
-
-acronym, abbr {
-cursor:help;
-letter-spacing:1px;
-border-bottom:1px dashed;
-}
-
-/***** Links *****/
-
-a, a:visited {
-text-decoration:none;
-}
-
-/***** Forms *****/
-
-form {
-margin:0;
-padding:0;
-display:inline;
-}
-
-input, select, textarea {
-font:1em arial, helvetica, sans-serif;
-}
-
-textarea {
-line-height:1.25;
-}
-
-label {
-cursor:pointer;
-}
-
-/***** Tables *****/
-
-table {
-border:0;
-margin:0 0 18px 0;
-padding:0;
-}
-
-	table tr td {
-	padding:2px;
-	}
-
-/***** Global Classes *****/
-
-.clear 			{ clear:both; }
-
-.float-left 	{ float:left; }
-.float-right 	{ float:right; }
-
-.text-left 		{ text-align:left; }
-.text-right 	{ text-align:right; }
-.text-center 	{ text-align:center; }
-.text-justify 	{ text-align:justify; }
-
-.bold 			{ font-weight:bold; }
-.italic 		{ font-style:italic; }
-.underline 		{ border-bottom:1px solid; }
-.highlight 		{ background:#ffc; }
-
-.wrap 			{ width:960px;margin:0 auto; }
-
-.img-left 		{ float:left;margin:4px 10px 4px 0; }
-.img-right 		{ float:right;margin:4px 0 4px 10px; }
-
-.nopadding 		{ padding:0; }
-.noindent 		{ margin-left:0;padding-left:0; }
-.nobullet 		{ list-style:none;list-style-image:none; }
-
-
-
-/* CSS Document */
-html{height: 100%;}
-body {
-	background: #cccccc;}
-h6 {font-size: 1px; text-indent: -1000px;}
-
-.main {display:block;
-	width: 575px;
-	left: 50%;
-	margin-left: -412px;
-	position:relative;
-	padding-left:125px;
-	padding-right:125px;
-	}
-.leftside a {
-	color: #ffffff;
-	text-decoration: underline;}
-.leftside a:hover {text-decoration: overline;}
-/* ///////////// Side bar info ////////////////*/
-.sidebars {
-	display:block;
-	width:125px;
+div.wrap2 .leftpanel, div.wrap2 .rightpanel {
+	width:200px;
+	display: inline;
 	float:left;
-	margin-top: 100px;
-	margin-left: -125px;
-	}
-.sidebars a {
-	display: block;
-	margin:0; padding: 0;
-	color: #000000;
-	font-size: 18px;
-	text-align: center;
-	padding: 5px;
-	height: 20px;
-	background: url(/images/nav_left_normal.gif) no-repeat top left;}
-.sidebars a:hover {
-	background:  url(/images/nav_left_hover.gif) no-repeat top left;
-	color:#000000;} 
-.sidebars a#selected, .sidebars a#selected:hover {
-	background: url(/images/nav_left_selected.gif) no-repeat top left;
-	color:#000000;}
-.sidebars2 {
-	display:block;
-	width:125px;
-	float:right;
-	margin-top: 100px;
-	margin-right:-125px;
-	}
-.sidebars2 a {
-	display: block;
-	margin:0; padding: 0;
-	color: #000000;
-	font-size: 18px;
-	text-align: center;
-	padding: 5px;
-	height: 20px;
-	background:url(/images/nav_right_normal.gif) no-repeat top right;}
-.sidebars2 a:hover {
-	background:  url(/images/nav_right_hover.gif) no-repeat top right;
-	color:#000000;} 
-.sidebars2 a#selected, .sidebars2 a#selected:hover {
-	background:url(/images/nav_right_selected.gif) no-repeat top right;
-	color:#000000;}
-/*//////// heading info //////////*/
-.head {
-	width:575px;
-	height: 100px;
-	line-height: 100px;
-	float: left;
-	display: block;
-	background: #999967 url(/images/header.gif) no-repeat top right;
-	
-	}
-.head p {
-	font: 40px sans-serif;
-	color: #000000;
-	text-indent: 10px;
-	display: block;
-	line-height: 90px;}
-.head2 p{
-	display:block;
-	color:#7ea725;
-	font-size:10px;
-	margin-top:-75px;
-	margin-left:75px;}
-/*/////////////// main info /////////////////*/
-.leftside {
-	display: block;
-	float: left;
-	width: 575px;
-	padding-top: 10px;
-	padding-bottom:5px;
-	background:#ffffff;}
-.leftbox {
-	float: left;
-	margin-left: 15px;
-	background: #cccc9a url(/images/pline.gif) repeat-y top right;
-	padding: 7px;
-	margin-bottom: 10px;}
-.leftbox h1 {
-	padding:5px 0 2px 0;
-	letter-spacing:-1px;
-	font:2em arial, helvetica, sans-serif;
-	border-bottom: 2px solid #22231b;
-	width: 527px;
-	margin-bottom: 5px;}
-.leftbox h2 {
-	padding:5px 0 2px 0;
-	letter-spacing:-1px;
-	font:1.75em arial, helvetica, sans-serif;
-	border-bottom: 2px solid #22231b;
-	width: 527px;
-	margin-bottom: 5px;}
-.leftbox h3 {
-	padding:5px 0 2px 0;
-	letter-spacing:-1px;
-	font:1.5em arial, helvetica, sans-serif;
-	border-bottom: 2px solid #22231b;
-	width: 527px;
-	margin-bottom: 5px;}
-.leftbox p { text-indent: 10px;
-	font-size: 17px;
-	width: 535px;}
+}
 
-/* ////////////////////// bottom info ///////////////*/
-.footer {
-	clear: both;
-	width: 575px;
-	min-height: 32px;
-	background: #999967 url(/images/footer.gif) no-repeat top right;
-	padding-top: 5px;}
-#footleft {float: left;}
-#footmiddle {float: right; padding-right: 85px;}
-.footer p {
-	font-size: 15px;
-	text-indent: 5px;
-	color: #000000;}
-.footer a {color:#ffffff; text-decoration:underline;}
-.footer a:hover, .footer a:visited:hover {text-decoration:overline;}
+div.wrap2 .mainpanel {
+	width:600px;
+	float:left;
+}
+
+div.leftpanel .header, div.rightpanel .header {
+	background-image:url(/images/header.png);
+	background-repeat:no-repeat;
+	width:180px;
+	line-height:35px;
+	padding-left:20px;
+	color:#FFFFFF;
+	overflow:hidden;
+	font-weight:bold;
+}
+
+.text { padding:8px; text-align:justify; }
+/* uplatnuje sa na left a right stlpec */
+.text img { margin-right:10px; margin-bottom: 10px; border:0;  float:left; }
+
+.text_ { padding:15px; text-align:justify; }
+/* uplatnuje sa na hlavny stlpec */
+.text_ img { vertical-align:middle; border:0; }
+
+span.divider {
+	border-bottom:1px dashed #333333; 
+	padding-bottom:5px; 
+	margin-bottom:5px; 
+	display:block;
+}
+
+div.rightpanel .inquiry, div.leftpanel .inquiry {
+	padding:8px; 
+	text-align:justify;
+}
+
+.inquiry a, .inquiry a:link, .inquiry a:visited, .inquiry a:hover { text-decoration:none; }
+
+-->
 
 /* //////////////////////////// misc //////////////////////*/
 code {
