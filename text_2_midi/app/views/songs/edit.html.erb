@@ -1,24 +1,5 @@
-<h1>Editing song</h1>
+<h1>Edit Your Song</h1>
+<%= render :partial => "song_form",:local=>{:button_name=>"Update Drink"} %>
+<%= link_to "View All Drinks",songs_path %>
 
-<% form_for(@song) do |f| %>
-  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :composed_by %><br />
-    <%= f.text_field :composed_by %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @song %> |
-<%= link_to 'Back', songs_path %>

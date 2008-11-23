@@ -12,30 +12,33 @@
 <div class="wrap2">
 <div class="logo">
 <div style="display:inline; float:left;">
-				Literature 2 Music 
-</div>
-<div style="display:inline; float:right">
-<input type="text" />
 </div>
 </div>
 
 <div class="info">
-<b>Within Literature there are endless sonic possibilities</b> 
+<b>Within Literature there are endless sonic possibilities</b>
+</div>
+
+<div class="info"> 
+<b>Search:</b>&nbsp; 
+<input type="text" />
 </div>
 
 <b>
- <%= link_to 'Main'%> &nbsp;
-  <%= link_to 'Tutorials'%> &nbsp;
-	<%= link_to 'Sign-up'%> &nbsp;
-	  <%= link_to 'Login'%> &nbsp;
-		<%= link_to ''%> &nbsp;
-		  <%= link_to ''%> &nbsp;
+ <%= link_to_unless_current 'Main', root_path %> &nbsp;
+  <%= link_to_unless_current 'Tutorials', :controller =>'tutorials' %> &nbsp;
+	<%= link_to_unless_current 'Join',new_user_path%> &nbsp;
+	  <%= link_to_unless_current 'Login', new_session_path %> &nbsp;
+		<%= link_to_unless_current ' Create A Composition' ,new_song_path %> &nbsp;
+		  <%= link_to_unless_current '' %> &nbsp;
 </b>
+
+
+<li><%= @sort_messages %><%= "created by " + current_user.login if current_user %></li><br/>
 
 <!-- the main content area -->
 <div class="mainpanel">
 <div class="text_">
-<h1><a href="#">Welcome on our website!</a></h1>
 <div class="text">
 <%= yield %>
 </div>
@@ -50,40 +53,40 @@
 <div class="text">
 </div>
 </div>
-
 </div>
  <!-- The right Panel section -->
 <div class="rightpanel">
+<div class="header">Recent Tutorials</div>	
+<span class="divider" style="font-weight:bold;">Learn More<span>	
+	<span class="divider"><a href="#">Tutorial 1</a> (Basic Theory)</span>
+	<span class="divider"><a href="#">Tutorial 2</a> (Basic Theory )</span>
+
+	
+	
 <div class="header">Recent Releases</div>
 <div class="inquiry">
-<span class="divider" style="font-weight:bold;">The Last 10 Newest Composition</span> 
+<span class="divider" style="font-weight:bold;">The Last 5 Newest Composition</span> 
 <span class="divider"><a href="#">Viris delectus voluptatum</a> (467)</span>
 <span class="divider"><a href="#">Has ne etiam epicuri</a> (1347)</span>
 					 <span class="divider"><a href="#">Docendi honestatis eos ne</a> (608)</span> 
 					 <span class="divider"><a href="#">Mel ex ullum probatus similique</a> (609)</span>
-					 <strong>3031 votes</strong><br /><br />
-
 					 </div>
 
 					 <div class="header">Literature 2 Music</div>
-
 					 <div class="text">
+						
+		<strong>3031 Total Compositions</strong><br/><br />
+		<strong>531 Members</strong><br /><br />
+						
 
-					 	<strong>Corporation ltd.</strong><br /><br />
-						212 Military Parkway<br />
-					    <span class="divider">Los Angeles, CA 94043</span>
-
-						Telephone: +421 903 000 000<br />
-						E-mail: e-mail@domain.com<br />
-						ICQ: 000-000-000<br />
-						<span class="divider">Skype: corporation1</span>
-
-						Telephone: +421 903 000 000<br />
-						E-mail: e-mail@domain.com<br />
-						ICQ: 000-000-000<br />
-						Skype: corporation1<br /><br />
-
-					 </div> 
+					 	<strong>Contact</strong><br /><br />
+							E-mail: gabrielg1976@gmail.com<br />
+							Twitter: Alphacore<br />
+							Plurk:Alphacore<br />
+					    <span class="divider">&nbsp;</span>
+						<span class="divider"><strong>Share this Site</strong></span>
+					
+						</div> 
 
 				</div>
 
@@ -92,9 +95,8 @@
 			<!-- Do not change anything here! It may disable your webpage. -->
 
 			<div class="info1">
-				<div style="display:inline; float:left;">&copy; 2008 <a href="#">yourwebsite.com</a>. Design <a href="http://pbcreations.sk" title="Webdesign, professional web solutions">P&amp;B Creations</a>.</div>
-				<div style="display:inline; float:right;"><a href="http://www.topas-tachlovice.cz/topas-tachlovice.aspx" title="ObËanskÈ sdruûenÌ Topas Tachlovice">Tachlovice</a></div>
-			</div>
+				<div style="display:inline; float:left;">&copy; 2008 <a href="#"></a>  <a href="http://tinyurl.com/alphacore" title="Webdesign, professional web solutions">GDG Consulting</a>.</div>
+</div>
 
 			<!-- Do not change anything here! It may disable your webpage. -->
 
