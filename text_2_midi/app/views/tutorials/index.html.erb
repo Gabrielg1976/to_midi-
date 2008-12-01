@@ -1,2 +1,27 @@
-<h1> Text_2_midi Tutorials & Concepts</h1>
-<p>This page will be filled with lessons and Theories on the subject of text_2_midi</p>
+<h1>Listing tutorials</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Lesson</th>
+    <th>Url</th>
+    <th>Image</th>
+    <th>Posted by</th>
+  </tr>
+
+<% for tutorials in @tutorials %>
+  <tr>
+    <td><%=h tutorials.title %></td>
+    <td><%=h tutorials.lesson %></td>
+    <td><%=h tutorials.url %></td>
+    <td><%=h tutorials.image %></td>
+    <td><%=h tutorials.posted_by %></td>
+    <td><%= link_to 'Show', tutorials %></td>
+    <td><%= link_to 'Edit', edit_tutorials_path(tutorials) %></td>
+    <td><%= link_to 'Destroy', tutorials, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to_unless_current ' Create A Tutorial' ,new_tutorial_path %>
+

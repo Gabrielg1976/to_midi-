@@ -1,5 +1,4 @@
 # Created using the Midi Library Gem created by Jim Menerad
-# Speaical thanks to Giles Bowkett for all his help   
 # to_midi Provided from the Rails Cookbook 
 # This script generates plain text into a single midi Track 
 #  All Converion and Application logic Created & Designed by Gabriel G. Updated Aug 24th 2008
@@ -18,26 +17,37 @@ require 'open-uri'
   class Array
     
      def to_midi(file, note_length='half')
-        midi_max = 108.0
-        midi_min = 21.0
+        midi_max = 128.0
+        midi_min = 0.0
         low, high = min, max
         
         song = MIDI::Sequence.new
+       
         song.tracks << (melody = MIDI::Track.new(song))
-        
+       
         melody.events <<  
+       
         MIDI::Tempo.new(MIDI::Tempo.bpm_to_mpq(120))
         melody.events << MIDI::ProgramChange.new(0, 0)
+       
         each do |number|
          midi_note = (midi_min + ((number-midi_min) * (midi_max-low)/high)).to_i
          melody.events << MIDI::NoteOnEvent.new(0, midi_note, 127, 0)
-        melody.events << MIDI::NoteOffEvent.new(0, midi_note, 127,
-        song.note_to_delta(note_length))
-               end
-          open(file, 'w') { |f| song.write(f) }
+         melody.events << MIDI::NoteOffEvent.new(0, midi_note, 127,
+         song.note_to_delta(note_length))
+        end
+        open(file, 'w') { |f| song.write(f) }
       end
     end
+    
+    # Main Menu of a standalone Text_2_midi Converter 
+    puts "Text_2_Midi Converter "
+    puts "1 = User input"
+    puts "2 = reads in for a text file"
+    puts "3 = generates set random letter pattern based user"
     puts "Please choose a Number between 1-3"
+    
+    
     option = gets.chomp
     case option
 

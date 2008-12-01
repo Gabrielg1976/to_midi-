@@ -9,12 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080906015638) do
+ActiveRecord::Schema.define(:version => 20081127000359) do
 
   create_table "songs", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.string   "composed_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tutorials", :force => true do |t|
+    t.string   "title"
+    t.text     "lesson"
+    t.string   "url"
+    t.string   "image"
+    t.string   "posted_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,8 +2,8 @@
 module To_Midi
     
  def to_midi(file, note_length='half')
-     midi_max = 108.0
-     midi_min = 21.0
+     midi_max = 128.0
+     midi_min = 0.0
 
       low, high = min, max
       song = MIDI::Sequence.new

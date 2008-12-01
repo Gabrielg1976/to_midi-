@@ -1,2 +1,28 @@
-<h1>Tutorials#show</h1>
-<p>Find me in app/views/tutorials/show.html.erb</p>
+<p>
+  <b>Title:</b>
+  <%=h @tutorials.title %>
+</p>
+
+<p>
+  <b>Lesson:</b>
+  <%=h @tutorials.lesson %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @tutorials.url %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%=h @tutorials.image %>
+</p>
+
+<p>
+  <b>Posted by:</b>
+  <%=h @tutorials.posted_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_tutorials_path(@tutorials) %> |
+<%= link_to 'Back', tutorials_path %>

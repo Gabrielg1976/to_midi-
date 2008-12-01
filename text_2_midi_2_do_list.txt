@@ -1,0 +1,19 @@
+text_2_midi Rails App To do List 
+
+1.( Notification email ) # send Email at Sign-up
+
+2. ( Finish profile page ) users has_one :profile 
+:profile belongs_to :users
+
+3. (create dynamic playlist setup for each user ) :users has_one :playlist :playlist belongs to :users
+
+4. ( Fix Css )
+
+5. ( Finish stat charts system )
+ :music_stats belongs_to :user
+ :user has_many :music_stats 
+
+6. Add a Tutorial Page 
+create controller tutorials index 
+
+7. 
