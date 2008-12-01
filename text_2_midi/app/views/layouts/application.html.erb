@@ -5,65 +5,32 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Songs: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'main' %>
 </head>
 <body>
-<div class="wrap1">
-<div class="wrap2">
-<div class="logo">
-<div style="display:inline; float:left;">
-</div>
-</div>
 
-<div class="info">
-<b>Within Literature there are endless sonic possibilities</b>
-</div>
+	<div id="wrap">
+<div id="header">
+	<b>Within Literature there are endless sonic possibilities</b>
+<div>
 
-<div class="info"> 
-<b>Search:</b>&nbsp; 
-<input type="text" />
-</div>
-
+<div id="menu">
 <b>
  <%= link_to_unless_current 'Main', root_path %> &nbsp;
-  <%= link_to_unless_current 'Tutorials', :controller =>'tutorials' %> &nbsp;
-	<%= link_to_unless_current 'Join',new_user_path%> &nbsp;
+	<%= link_to_unless_current 'Join',new_user_path %> &nbsp;
 	  <%= link_to_unless_current 'Login', new_session_path %> &nbsp;
-		<%= link_to_unless_current ' Create A Composition' ,new_song_path %> &nbsp;
-		  <%= link_to_unless_current '' %> &nbsp;
+		<%= link_to_unless_current ' Create A Composition' ,new_song_path %>
 </b>
-
-
-<li><%= @sort_messages %><%= "created by " + current_user.login if current_user %></li><br/>
+</div>
+<%= @sort_messages %><%= "Welcome" +"  " + current_user.login if current_user %></li>
 
 <!-- the main content area -->
-<div class="mainpanel">
-<div class="text_">
-<div class="text">
+<div id="content">
+<div id="left">
 <%= yield %>
 </div>
 </div>
 
-<div class="text_">
-<div class="text">
-</div>
-</div>
 
-<div class="text_">
-<div class="text">
-</div>
-</div>
-</div>
-<!-- Do not change anything here! It may disable your webpage. -->
-
-			<div class="info1">
-				<div style="display:inline; float:left;">&copy; 2008 <a href="#"></a>  <a href="http://tinyurl.com/alphacore" title="Webdesign, professional web solutions">GDG Consulting</a>.</div>
-</div>
-
-			<!-- Do not change anything here! It may disable your webpage. -->
-
-		</div>
-
-	</div>
 </body>
 </html>

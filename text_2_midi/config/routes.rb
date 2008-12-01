@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :tutorials
-
   map.resources :users, :has_many => :songs
   map.resource :session
   map.sign_up '/signup', :controller=> "users", :action=> "new"
@@ -10,7 +8,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :main
   map.root :controller => "main"
   map.resources :profiles,:has_many => :users
-  map.resources :tutorials 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
